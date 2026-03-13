@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Bookings</title>
+</head>
+<body>
+
+<h2>Appointments Booked With Me</h2>
+
+<table border="1">
+<tr>
+    <th>Patient</th>
+    <th>Date</th>
+    <th>Start Time</th>
+    <th>End Time</th>
+</tr>
+
+{% for booking in bookings %}
+<tr>
+    <td>{{ booking.patient.username }}</td>
+    <td>{{ booking.slot.date }}</td>
+    <td>{{ booking.slot.start_time }}</td>
+    <td>{{ booking.slot.end_time }}</td>
+</tr>
+{% empty %}
+<tr>
+    <td colspan="4">No appointments yet</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+<a href="/doctor-dashboard/">Back to Dashboard</a>
+
+</body>
+</html>

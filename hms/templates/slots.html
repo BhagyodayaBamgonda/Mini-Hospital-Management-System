@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Available Doctor Slots</h2>
+
+<table>
+
+<tr>
+<th>Doctor</th>
+<th>Date</th>
+<th>Time</th>
+<th></th>
+</tr>
+
+{% for slot in slots %}
+
+<tr>
+
+<td>{{ slot.doctor }}</td>
+
+<td>{{ slot.date }}</td>
+
+<td>{{ slot.start_time }} - {{ slot.end_time }}</td>
+
+<td>
+<a href="/book/{{slot.id}}/">Book</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

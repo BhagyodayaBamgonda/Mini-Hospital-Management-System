@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Add Availability Slot</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<label>Date</label>
+<input type="date" name="date">
+
+<label>Start Time</label>
+<input type="time" name="start">
+
+<label>End Time</label>
+<input type="time" name="end">
+
+<button type="submit">Add Slot</button>
+
+</form>
+
+{% endblock %}

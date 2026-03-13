@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Signup</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<input type="text" name="username" placeholder="Username">
+
+<input type="password" name="password" placeholder="Password">
+
+<select name="role">
+<option value="doctor">Doctor</option>
+<option value="patient">Patient</option>
+</select>
+
+<button type="submit">Signup</button>
+
+</form>
+
+{% endblock %}
