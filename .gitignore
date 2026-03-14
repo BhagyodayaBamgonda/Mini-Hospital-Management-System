@@ -5,3 +5,5 @@ db.sqlite3
 node_modules/
 .env
 .DS_Store
+credentials.json
+token.pickle
