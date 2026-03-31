@@ -128,7 +128,12 @@ USE_TZ = False
 
 AUTH_USER_MODEL = 'accounts.User'
 
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / 'static']
+import os
 
-TEMPLATES[0]['DIRS'] = [BASE_DIR / 'templates']
+STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
