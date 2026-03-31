@@ -15,6 +15,8 @@ def add_slot(request):
         date=request.POST['date']
         start=request.POST['start']
         end=request.POST['end']
+    
+        
 
         Availability.objects.create(
         doctor=request.user,
